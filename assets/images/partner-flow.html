@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zoho Mail</title>
+    <link href="style.css" rel="stylesheet" type="text/css"> </head>
+
+<body>
+    <div class="page thmBasic">
+        <div class="page_content">
+            <div class="page_header">
+                <h1><img src="zoho.png" /><span>Zoho Mail</span></h1>
+                
+            </div>
+            <div class="pageInner">
+                
+                    <div class="frt goBackLink"><i class="backArrow"></i><span>Go Back</span></div>
+            
+                <div class="pageInner_title">
+                    <h3>Partner Flow</h3>
+                
+                </div>
+            
+            
+            <form method="post" action="zohomail.cgi">
+            <div class="form">
+                <div class="form_row">
+                    <label class="form-label">Domain</label>
+                    <select name="zmr_dr" class="form-input form-input-select">
+                        <option name=".com" default>.com</option>
+                        <option name=".eu" >.eu</option>
+                    </select> <i class="form_row-info">The name of the region the account is configured</i> </div>
+                <div class="form_row">
+                    <label class="form-label">Client Id</label>
+                    <input name="zmr_ci" type="text" class="form-input" /> <i class="form_row-info">The name of the region the account is configured</i> </div>
+                <div class="form_row">
+                    <label class="form-label">Client Secret</label>
+                    <input name="zmr_cs" type="text" class="form-input" /> <i class="form_row-info">Created in the developer console</i> </div>
+                <div class="form_row">
+                    <label class="form-label">Authorization Redirect URL</label>
+                    <input name="zmr_ru" type="text" class="form-input" readonly placeholder="<?php echo 'https://'.$ENV{'HOST'}.':'.$ENV{'SERVER_PORT'}.$ENV{'SCRIPT_URI'}; ?>" /> <i class="form_row-info">Copy this URL into your web applications</i> </div>
+                
+                <div class="form_row form_row-btn"><button class="btn">Authenticate</button> </div>
+            </div>
+            </form>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
